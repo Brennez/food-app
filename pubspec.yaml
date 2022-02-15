@@ -83,6 +83,14 @@ flutter:
     - family: gilroy-semi-bold
       fonts:
         - asset: assets/fonts/gilroy-semi-bold.ttf
+
+    - family: gilroy-bold
+      fonts:
+        - asset: assets/fonts/gilroy-bold.ttf
+
+    - family: gilroy-regular
+      fonts:
+        - asset: assets/fonts/gilroy-regular.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

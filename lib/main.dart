@@ -82,9 +82,9 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.black,
                   ),
                   fillColor: Colors.white,
-                  hintText: 'Search',
+                  hintText: 'Search...',
                   hintStyle: const TextStyle(
-                    fontFamily: 'gilroy-medium',
+                    fontFamily: 'gilroy-mediu',
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(23),
@@ -105,12 +105,12 @@ class _HomePageState extends State<HomePage> {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
+              children: const [
                 Text(
                   'All',
                   style: TextStyle(
                     color: Color(0xffA1A0A4),
-                    fontFamily: 'gilroy-medium',
+                    fontFamily: 'gilroy-mediu',
                   ),
                 ),
                 Text(
@@ -118,62 +118,259 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyle(
                     color: Color(0xff201F20),
                     fontFamily: 'gilroy-semi-bold',
-                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(
                   'Junk food',
                   style: TextStyle(
                     color: Color(0xffA1A0A4),
-                    fontFamily: 'gilroy-medium',
+                    fontFamily: 'gilroy-mediu',
                   ),
                 ),
                 Text(
                   'Dessert',
                   style: TextStyle(
                     color: Color(0xffA1A0A4),
-                    fontFamily: 'gilroy-medium',
+                    fontFamily: 'gilroy-mediu',
                   ),
                 ),
               ],
             ),
-            Row(
-              children: [
-                Card(
-                  margin: EdgeInsets.only(
-                    top: 35,
-                    bottom: 35,
-                    left: 17,
-                    right: 17,
-                  ),
-                  elevation: 8,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(23),
-                  ),
-                  child: Column(
-                    children: [
-                      Row(
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Card(
+                    elevation: 8,
+                    margin: const EdgeInsets.only(
+                      top: 35,
+                      bottom: 35,
+                      left: 17,
+                      right: 17,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(23),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        left: 23,
+                        right: 23,
+                        bottom: 37,
+                      ),
+                      child: Column(
                         children: [
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.favorite,
-                              color: Color(0xffFF7272),
+                          Container(
+                            margin: const EdgeInsets.only(
+                              left: 100,
+                              top: 16,
                             ),
-                          )
+                            child: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.favorite,
+                                color: Color(0xffFF7272),
+                              ),
+                            ),
+                          ),
+                          const CircleAvatar(
+                            radius: 80,
+                            backgroundImage:
+                                AssetImage('assets/images/food1.png'),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(
+                              top: 13.78,
+                            ),
+                            child: Text(
+                              'Eybisi Salad Mix',
+                              textAlign: TextAlign.justify,
+                              style: TextStyle(
+                                color: Color(0xff201F20),
+                                fontFamily: 'gilroy-semi-bold',
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(
+                              top: 11.89,
+                            ),
+                            child: Text(
+                              'Mix vegetables ingredients',
+                              textAlign: TextAlign.justify,
+                              style: TextStyle(
+                                color: Color(0xffA1A0A4),
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(
+                              top: 14.68,
+                            ),
+                            child: Text(
+                              '\$14.99',
+                              style: TextStyle(
+                                color: Color(0xff201F20),
+                                fontFamily: 'gilroy-bold',
+                                fontSize: 14,
+                              ),
+                            ),
+                          ),
                         ],
                       ),
-                      CircleAvatar(
-                        radius: 80,
-                        backgroundImage: AssetImage('assets/images/food1.png'),
-                      ),
-                      Text('Eybisi Salad Mix'),
-                      Text('Mix vegetables ingredients'),
-                      Text('\$14.99'),
-                    ],
+                    ),
                   ),
-                )
-              ],
+                  // --------- SEGUNDO CARD --------------
+                  Card(
+                    elevation: 8,
+                    margin: const EdgeInsets.only(
+                      top: 35,
+                      bottom: 35,
+                      left: 17,
+                      right: 17,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(23),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        left: 23,
+                        right: 23,
+                        bottom: 37,
+                      ),
+                      child: Column(
+                        children: [
+                          Container(
+                            margin: const EdgeInsets.only(
+                              left: 100,
+                              top: 16,
+                            ),
+                            child: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.favorite,
+                                color: Color(0xffFF7272),
+                              ),
+                            ),
+                          ),
+                          const CircleAvatar(
+                            radius: 80,
+                            backgroundImage:
+                                AssetImage('assets/images/food1.png'),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(
+                              top: 13.78,
+                            ),
+                            child: Text(
+                              'Easy Greak Salad',
+                              textAlign: TextAlign.justify,
+                              style: TextStyle(
+                                color: Color(0xff201F20),
+                                fontFamily: 'gilroy-semi-bold',
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(
+                              top: 11.89,
+                            ),
+                            child: Text(
+                              'Loves and Lemon',
+                              textAlign: TextAlign.justify,
+                              style: TextStyle(
+                                color: Color(0xffA1A0A4),
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(
+                              top: 14.68,
+                            ),
+                            child: Text(
+                              '\$21.99',
+                              style: TextStyle(
+                                color: Color(0xff201F20),
+                                fontFamily: 'gilroy-bold',
+                                fontSize: 14,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.only(
+                top: 22,
+                left: 16,
+                right: 16,
+                bottom: 29,
+              ),
+              decoration: BoxDecoration(
+                color: Color(0xff201F20),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Column(
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: Image.asset('assets/images/Home.png'),
+                        ),
+                        const Text(
+                          'Home',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'gilroy-regular',
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.shopping_bag_outlined,
+                            color: Color(0xffBCBBBC),
+                          ),
+                        ),
+                        const Text(
+                          'Cart',
+                          style: TextStyle(
+                            color: Color(0xffBCBBBC),
+                            fontFamily: 'gilroy-regular',
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: Image.asset('assets/images/User.png'),
+                        ),
+                        const Text(
+                          'Profile',
+                          style: TextStyle(
+                            color: Color(0xffBCBBBC),
+                            fontFamily: 'gilroy-regular',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
             )
           ],
         ),
