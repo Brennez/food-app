@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food/consts/colors.dart';
 
 class CountButton extends StatelessWidget {
   const CountButton({Key? key, required this.icon}) : super(key: key);
@@ -19,6 +20,7 @@ class CountButton extends StatelessWidget {
         icon: Icon(
           icon,
           size: 15,
+          color: kSecondaryColor,
         ),
       ),
     );

@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 top: 55,
                 left: 21,
                 right: 21,

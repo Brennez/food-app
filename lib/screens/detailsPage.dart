@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food/consts/colors.dart';
 import 'package:food/widgets/countButton.dart';
 
 class DetailsPage extends StatefulWidget {
@@ -12,16 +13,16 @@ class _DetailsPageState extends State<DetailsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffE5E5E5),
+      backgroundColor: kBackgroundColor,
       appBar: AppBar(
-        backgroundColor: Color(0xffE5E5E5),
+        backgroundColor: kBackgroundColor,
         elevation: 0,
         actions: [
           IconButton(
             onPressed: () {},
             icon: const Icon(
               Icons.shopping_bag_outlined,
-              color: Color(0xff201F20),
+              color: kSecondaryColor,
               size: 30,
             ),
           ),
@@ -31,41 +32,104 @@ class _DetailsPageState extends State<DetailsPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Column(
-                  children: [
-                    Text(
-                      'Easy Greak\nSalad',
-                      style: TextStyle(
-                        color: Color(0xff201F20),
-                        fontFamily: 'gilroy-semi-bold',
-                        fontSize: 40,
-                      ),
+            Container(
+              margin: const EdgeInsets.only(
+                top: 100,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(
+                      left: 35,
                     ),
-                    Text(
-                      'Price',
-                      style: TextStyle(),
-                    ),
-                    Text('\$21.99'),
-                    Text('Choice quantity'),
-                    Row(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        CountButton(icon: Icons.add),
-                        Text('1'),
-                        CountButton(icon: Icons.remove),
+                        const Text(
+                          'Easy Greak\nSalad',
+                          style: TextStyle(
+                            color: kSecondaryColor,
+                            fontFamily: 'gilroy-semi-bold',
+                            fontSize: 40,
+                          ),
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(
+                            bottom: 4,
+                            top: 19,
+                          ),
+                          child: Text(
+                            'Price',
+                            style: TextStyle(
+                              color: kfoodTypesDisableColor,
+                              fontFamily: 'gilroy-regular',
+                              fontSize: 14,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(
+                            bottom: 23,
+                          ),
+                          child: Text(
+                            '\$21.99',
+                            style: TextStyle(
+                              color: kSecondaryColor,
+                              fontFamily: 'gilroy',
+                              fontWeight: FontWeight.w800,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(
+                            bottom: 15,
+                          ),
+                          child: Text(
+                            'Choice quantity',
+                            style: TextStyle(
+                              color: kfoodTypesDisableColor,
+                              fontFamily: 'gilroy-regular',
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(
+                                right: 19,
+                              ),
+                              child: CountButton(icon: Icons.add),
+                            ),
+                            Text(
+                              '1',
+                              style: TextStyle(
+                                color: kSecondaryColor,
+                                fontFamily: 'gilroy-bold',
+                                fontSize: 18,
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(
+                                left: 19,
+                              ),
+                              child: CountButton(icon: Icons.remove),
+                            ),
+                          ],
+                        )
                       ],
-                    )
-                  ],
-                ),
-                CircleAvatar(
-                  radius: 120,
-                  backgroundImage: AssetImage(
-                    'assets/images/food1.png',
+                    ),
                   ),
-                )
-              ],
+                  CircleAvatar(
+                    radius: 120,
+                    backgroundImage: AssetImage(
+                      'assets/images/food1.png',
+                    ),
+                  )
+                ],
+              ),
             )
           ],
         ),
