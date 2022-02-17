@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:food/consts/colors.dart';
 
 class CountButton extends StatelessWidget {
-  const CountButton({Key? key, required this.icon}) : super(key: key);
+  const CountButton({Key? key, required this.icon, required this.onPressed})
+      : super(key: key);
 
   final IconData icon;
+  final Function onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,9 @@ class CountButton extends StatelessWidget {
         color: Colors.white,
       ),
       child: IconButton(
-        onPressed: () {},
+        onPressed: () {
+          onPressed();
+        },
         icon: Icon(
           icon,
           size: 15,

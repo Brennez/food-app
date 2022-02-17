@@ -3,8 +3,8 @@ import 'package:food/consts/colors.dart';
 
 import 'orderButton.dart';
 
-class HeaderDescription extends StatelessWidget {
-  const HeaderDescription({
+class CardDescription extends StatelessWidget {
+  const CardDescription({
     Key? key,
     required this.description,
     required this.stars,
@@ -73,7 +73,7 @@ class HeaderDescription extends StatelessWidget {
               ),
               Container(
                 margin: const EdgeInsets.only(
-                  top: 20,
+                  top: 40,
                   bottom: 20,
                 ),
                 child: Row(

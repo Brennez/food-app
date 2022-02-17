@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food/consts/colors.dart';
 import 'package:food/widgets/countButton.dart';
-import 'package:food/widgets/headerDescription.dart';
+import 'package:food/widgets/CardDescription.dart';
 import 'package:food/widgets/orderButton.dart';
 
 class DetailsPage extends StatefulWidget {
@@ -12,20 +12,37 @@ class DetailsPage extends StatefulWidget {
 }
 
 class _DetailsPageState extends State<DetailsPage> {
+  int countItem = 0;
+
+  void incrementItem() {
+    countItem++;
+  }
+
+  void decrementItem() {
+    if (countItem > 0) {
+      countItem--;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackgroundColor,
+      backgroundColor: Color(0xffF6F7FC),
       appBar: AppBar(
-        backgroundColor: kBackgroundColor,
+        backgroundColor: Color(0xffF6F7FC),
         elevation: 0,
         actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.shopping_bag_outlined,
-              color: kSecondaryColor,
-              size: 30,
+          Container(
+            margin: EdgeInsets.only(
+              right: 16,
+            ),
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.shopping_bag_outlined,
+                color: kSecondaryColor,
+                size: 30,
+              ),
             ),
           ),
         ],
@@ -103,37 +120,57 @@ class _DetailsPageState extends State<DetailsPage> {
                             margin: EdgeInsets.only(
                               right: 19,
                             ),
-                            child: CountButton(icon: Icons.add),
+                            child: CountButton(
+                              icon: Icons.remove,
+                              onPressed: () {
+                                setState(() {
+                                  decrementItem();
+                                });
+                              },
+                            ),
                           ),
                           Text(
-                            '1',
-                            style: TextStyle(
+                            countItem.toString(),
+                            style: const TextStyle(
                               color: kSecondaryColor,
                               fontFamily: 'gilroy-bold',
                               fontSize: 18,
                             ),
                           ),
                           Container(
-                            margin: EdgeInsets.only(
+                            margin: const EdgeInsets.only(
                               left: 19,
                             ),
-                            child: CountButton(icon: Icons.remove),
+                            child: CountButton(
+                              icon: Icons.add,
+                              onPressed: () {
+                                setState(() {
+                                  incrementItem();
+                                });
+                              },
+                            ),
                           ),
                         ],
                       )
                     ],
                   ),
                 ),
-                CircleAvatar(
-                  radius: 120,
-                  backgroundImage: AssetImage(
-                    'assets/images/food1.png',
+                Container(
+                  width: 170,
+                  height: 170,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(
+                        'assets/images/food1.png',
+                      ),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                 )
               ],
             ),
           ),
-          HeaderDescription(
+          CardDescription(
               description:
                   'This Italian salad is full of all the right flavors and textures: crisp lettuce, crunchy garlic croutons, and zingy pepperoncini. It’s covered in punchy, herby Italian vinaigrette that makes the flavors sing! It can play sidekick to just about anything.',
               stars: 4.5)
