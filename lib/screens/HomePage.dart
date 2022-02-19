@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food/consts/colors.dart';
+import 'package:food/core/food.dart';
+import 'package:food/widgets/foodCard.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -7,6 +9,30 @@ class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
+
+List<Food> foods = [
+  Food(
+    'Eybisi Salad Mix',
+    'Mix vegetables ingredients',
+    21.99,
+    "This is a good salad to with friends and family maybe with your girlfriend.",
+    'assets/images/food1.png',
+  ),
+  Food(
+    'Easy Greak Salad',
+    'Loves and Lemon',
+    21.99,
+    "This Italian salad is full of all the right flavors and textures: crisp lettuce, crunchy garlic croutons, and zingy pepperoncini. It’s covered in punchy, herby Italian vinaigrette that makes the flavors sing! It can play sidekick to just about anything.",
+    'assets/images/food1.png',
+  ),
+  Food(
+    'Fish and Rice',
+    'Rice with greak fish',
+    21.99,
+    "This is a good fish to eat with a kind of wine and a good conversation with friends and talking about how this student have to take 10 in this avaliation yeah.",
+    'assets/images/food1.png',
+  ),
+];
 
 class _HomePageState extends State<HomePage> {
   @override
@@ -121,167 +147,13 @@ class _HomePageState extends State<HomePage> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  Card(
-                    elevation: 8,
-                    margin: const EdgeInsets.only(
-                      top: 35,
-                      bottom: 35,
-                      left: 17,
-                      right: 17,
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(23),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        left: 23,
-                        right: 23,
-                        bottom: 37,
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(
-                              left: 100,
-                              top: 16,
-                            ),
-                            child: IconButton(
-                              onPressed: () {},
-                              icon: const Icon(
-                                Icons.favorite,
-                                color: kLikeIconColor,
-                              ),
-                            ),
-                          ),
-                          const CircleAvatar(
-                            radius: 80,
-                            backgroundImage:
-                                AssetImage('assets/images/food1.png'),
-                          ),
-                          Container(
-                            margin: const EdgeInsets.only(
-                              top: 13.78,
-                            ),
-                            child: Text(
-                              'Eybisi Salad Mix',
-                              textAlign: TextAlign.justify,
-                              style: TextStyle(
-                                color: kSecondaryColor,
-                                fontFamily: 'gilroy-semi-bold',
-                              ),
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(
-                              top: 11.89,
-                            ),
-                            child: Text(
-                              'Mix vegetables ingredients',
-                              textAlign: TextAlign.justify,
-                              style: TextStyle(
-                                color: kfoodTypesDisableColor,
-                                fontSize: 12,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(
-                              top: 14.68,
-                            ),
-                            child: Text(
-                              '\$14.99',
-                              style: TextStyle(
-                                color: kSecondaryColor,
-                                fontFamily: 'gilroy-bold',
-                                fontSize: 14,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                  FoodCard(
+                    food: foods[0],
                   ),
-                  // --------- SEGUNDO CARD --------------
-                  Card(
-                    elevation: 8,
-                    margin: const EdgeInsets.only(
-                      top: 35,
-                      bottom: 35,
-                      left: 17,
-                      right: 17,
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(23),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        left: 23,
-                        right: 23,
-                        bottom: 37,
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(
-                              left: 100,
-                              top: 16,
-                            ),
-                            child: IconButton(
-                              onPressed: () {},
-                              icon: const Icon(
-                                Icons.favorite,
-                                color: Color(0xffFF7272),
-                              ),
-                            ),
-                          ),
-                          const CircleAvatar(
-                            radius: 80,
-                            backgroundImage:
-                                AssetImage('assets/images/food1.png'),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(
-                              top: 13.78,
-                            ),
-                            child: Text(
-                              'Easy Greak Salad',
-                              textAlign: TextAlign.justify,
-                              style: TextStyle(
-                                color: kSecondaryColor,
-                                fontFamily: 'gilroy-semi-bold',
-                              ),
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(
-                              top: 11.89,
-                            ),
-                            child: Text(
-                              'Loves and Lemon',
-                              textAlign: TextAlign.justify,
-                              style: TextStyle(
-                                color: kfoodTypesDisableColor,
-                                fontSize: 12,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(
-                              top: 14.68,
-                            ),
-                            child: Text(
-                              '\$21.99',
-                              style: TextStyle(
-                                color: kSecondaryColor,
-                                fontFamily: 'gilroy-bold',
-                                fontSize: 14,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                  FoodCard(
+                    food: foods[1],
                   ),
+                  FoodCard(food: foods[2])
                 ],
               ),
             ),
@@ -297,7 +169,7 @@ class _HomePageState extends State<HomePage> {
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(15),
+                padding: const EdgeInsets.all(10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -352,7 +224,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

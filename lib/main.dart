@@ -4,7 +4,7 @@ import 'package:food/screens/HomePage.dart';
 import 'package:food/screens/detailsPage.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           // primarySwatch: Colors.blueGrey,
           ),
-      home: DetailsPage(),
+      home: HomePage(),
     );
   }
 }

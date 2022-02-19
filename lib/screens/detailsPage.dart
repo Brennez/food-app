@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:food/consts/colors.dart';
 import 'package:food/widgets/countButton.dart';
 import 'package:food/widgets/CardDescription.dart';
-import 'package:food/widgets/orderButton.dart';
 
 class DetailsPage extends StatefulWidget {
   const DetailsPage({Key? key}) : super(key: key);
@@ -31,9 +30,18 @@ class _DetailsPageState extends State<DetailsPage> {
       appBar: AppBar(
         backgroundColor: Color(0xffF6F7FC),
         elevation: 0,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
+        ),
         actions: [
           Container(
-            margin: EdgeInsets.only(
+            margin: const EdgeInsets.only(
               right: 16,
             ),
             child: IconButton(
@@ -44,7 +52,7 @@ class _DetailsPageState extends State<DetailsPage> {
                 size: 30,
               ),
             ),
-          ),
+          )
         ],
       ),
       body: Column(
