@@ -16,6 +16,14 @@ class FoodCard extends StatefulWidget {
 }
 
 class _FoodCardState extends State<FoodCard> {
+  bool isLike = false;
+
+  toogleLike() {
+    setState(() {
+      isLike = !isLike;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -54,9 +62,11 @@ class _FoodCardState extends State<FoodCard> {
                   top: 16,
                 ),
                 child: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.favorite,
+                  onPressed: () {
+                    toogleLike();
+                  },
+                  icon: Icon(
+                    isLike ? Icons.favorite : Icons.favorite_outline,
                     color: kLikeIconColor,
                   ),
                 ),

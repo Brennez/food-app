@@ -123,7 +123,7 @@ class _HomePageState extends State<HomePage> {
                           color: Color(0xffFB9692),
                           width: 2,
                         ),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: AssetImage('assets/images/person.png'),
                         )),
                   ),
