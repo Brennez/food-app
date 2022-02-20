@@ -37,7 +37,7 @@ class CardDescription extends StatelessWidget {
                     style: TextStyle(
                         color: kSecondaryColor,
                         fontFamily: 'gilroy-bold',
-                        fontSize: 18),
+                        fontSize: 20),
                   ),
                   Row(
                     children: [

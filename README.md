@@ -1,16 +1,25 @@
-# food
+# App food Layout
 
-A new Flutter project.
+Desafio de layout proposto durante a disciplina de Programação IV - Com layout a partir do Dribble utilizando Dart e Flutter.
 
-## Getting Started
+## Repositório 
 
-This project is a starting point for a Flutter application.
+[Link do respositório](https://github.com/Brennez/food-app)
 
-A few resources to get you started if this is your first Flutter project:
+## Layout do Dribbble
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- [Layout do dribbble](https://dribbble.com/shots/15794084-Food-Mobile-App?utm_source=Clipboard_Shot&utm_campaign=saberali&utm_content=Food%20Mobile%20App&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=saberali&utm_content=Food%20Mobile%20App&utm_medium=Social_Share)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tecnologias
+
+- Dart
+- Flutter
+
+## ScreenShots
+
+| Home Page                              | Detalhes                                                    |
+| -------------------------------------- | ----------------------------------------------------------- |
+| ![](assets/images/homePage2.jpeg)      | ![](assets/images/detailsPageScreenShot.jpeg)               |
+|                                        |                                                             |
+| -------------------------------------- | ----------------------------------------------------------- |
+| ![](assets/images/homePage1.jpeg)      | ![](assets/images/video.gif)                                |
