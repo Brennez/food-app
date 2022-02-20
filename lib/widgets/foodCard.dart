@@ -32,7 +32,7 @@ class _FoodCardState extends State<FoodCard> {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return const DetailsPage();
+              return DetailsPage();
             },
           ),
         );

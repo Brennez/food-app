@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food/consts/colors.dart';
 import 'package:food/core/food.dart';
 import 'package:food/widgets/foodCard.dart';
+import 'package:food/widgets/navigationBar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ List<Food> foods = const [
     'assets/images/food1.png',
   ),
   Food(
-    'Easy Greak Salad',
+    'Easy Greak\nSalad',
     'Loves and Lemon',
     21.99,
     "This Italian salad is full of all the right flavors and textures: crisp lettuce, crunchy garlic croutons, and zingy pepperoncini. It’s covered in punchy, herby Italian vinaigrette that makes the flavors sing! It can play sidekick to just about anything.",
@@ -120,7 +121,7 @@ class _HomePageState extends State<HomePage> {
                         shape: BoxShape.circle,
                         color: kBackgroundColor,
                         border: Border.all(
-                          color: Color(0xffFB9692),
+                          color: const Color(0xffFB9692),
                           width: 2,
                         ),
                         image: const DecorationImage(
@@ -246,74 +247,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            Container(
-              margin: const EdgeInsets.only(
-                top: 22,
-                left: 16,
-                right: 16,
-                bottom: 29,
-              ),
-              decoration: BoxDecoration(
-                color: kSecondaryColor,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Column(
-                      children: [
-                        IconButton(
-                          onPressed: () {},
-                          icon: Image.asset('assets/images/Home.png'),
-                        ),
-                        const Text(
-                          'Home',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'gilroy-regular',
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.shopping_bag_outlined,
-                            color: kIconBarDisableColor,
-                          ),
-                        ),
-                        const Text(
-                          'Cart',
-                          style: TextStyle(
-                            color: kIconBarDisableColor,
-                            fontFamily: 'gilroy-regular',
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        IconButton(
-                          onPressed: () {},
-                          icon: Image.asset('assets/images/User.png'),
-                        ),
-                        const Text(
-                          'Profile',
-                          style: TextStyle(
-                            color: kIconBarDisableColor,
-                            fontFamily: 'gilroy-regular',
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            MyNavigationBar(),
           ],
         ),
       ),

@@ -26,9 +26,9 @@ class _DetailsPageState extends State<DetailsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF6F7FC),
+      backgroundColor: const Color(0xffF6F7FC),
       appBar: AppBar(
-        backgroundColor: Color(0xffF6F7FC),
+        backgroundColor: const Color(0xffF6F7FC),
         elevation: 0,
         leading: IconButton(
           onPressed: () {
@@ -86,7 +86,7 @@ class _DetailsPageState extends State<DetailsPage> {
                           bottom: 4,
                           top: 19,
                         ),
-                        child: Text(
+                        child: const Text(
                           'Price',
                           style: TextStyle(
                             color: kfoodTypesDisableColor,
@@ -96,10 +96,10 @@ class _DetailsPageState extends State<DetailsPage> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(
+                        margin: const EdgeInsets.only(
                           bottom: 23,
                         ),
-                        child: Text(
+                        child: const Text(
                           '\$21.99',
                           style: TextStyle(
                             color: kSecondaryColor,
@@ -110,10 +110,10 @@ class _DetailsPageState extends State<DetailsPage> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(
+                        margin: const EdgeInsets.only(
                           bottom: 15,
                         ),
-                        child: Text(
+                        child: const Text(
                           'Choice quantity',
                           style: TextStyle(
                             color: kfoodTypesDisableColor,
@@ -125,7 +125,7 @@ class _DetailsPageState extends State<DetailsPage> {
                       Row(
                         children: [
                           Container(
-                            margin: EdgeInsets.only(
+                            margin: const EdgeInsets.only(
                               right: 19,
                             ),
                             child: CountButton(
@@ -167,7 +167,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   width: 170,
                   height: 170,
                   decoration: BoxDecoration(
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: AssetImage(
                         'assets/images/food1.png',
                       ),
@@ -178,7 +178,7 @@ class _DetailsPageState extends State<DetailsPage> {
               ],
             ),
           ),
-          CardDescription(
+          const CardDescription(
               description:
                   'This Italian salad is full of all the right flavors and textures: crisp lettuce, crunchy garlic croutons, and zingy pepperoncini. It’s covered in punchy, herby Italian vinaigrette that makes the flavors sing! It can play sidekick to just about anything.',
               stars: 4.5)
