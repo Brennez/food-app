@@ -35,6 +35,63 @@ List<Food> foods = [
 ];
 
 class _HomePageState extends State<HomePage> {
+  bool isAll = false;
+  bool isHealthy = false;
+  bool isJunk = false;
+  bool isDessert = false;
+
+  toogleAllFood() {
+    setState(() {
+      if (isAll) {
+        isAll = false;
+      } else {
+        isAll = true;
+        isHealthy = false;
+        isJunk = false;
+        isDessert = false;
+      }
+    });
+  }
+
+  toogleHealthyFood() {
+    setState(() {
+      if (isHealthy) {
+        isHealthy = false;
+      } else {
+        isHealthy = true;
+        isAll = false;
+        isJunk = false;
+        isDessert = false;
+      }
+    });
+  }
+
+  toogleJunkFood() {
+    setState(() {
+      if (isJunk) {
+        isJunk = false;
+      } else {
+        isJunk = true;
+        isHealthy = false;
+        isAll = false;
+        isDessert = false;
+      }
+    });
+  }
+
+  toogleDessertFood() {
+    setState(() {
+      if (isDessert) {
+        isDessert = false;
+      } else {
+        isDessert = true;
+        isJunk = false;
+        isHealthy = false;
+        isAll = false;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -112,33 +169,55 @@ class _HomePageState extends State<HomePage> {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: const [
-                Text(
-                  'All',
-                  style: TextStyle(
-                    color: kfoodTypesDisableColor,
-                    fontFamily: 'gilroy-mediu',
+              children: [
+                TextButton(
+                  onPressed: () {
+                    toogleAllFood();
+                  },
+                  child: Text(
+                    'All',
+                    style: TextStyle(
+                      color: isAll ? kSecondaryColor : kfoodTypesDisableColor,
+                      fontFamily: 'gilroy-semi-bold',
+                    ),
                   ),
                 ),
-                Text(
-                  'Healthy food',
-                  style: TextStyle(
-                    color: kSecondaryColor,
-                    fontFamily: 'gilroy-semi-bold',
+                TextButton(
+                  onPressed: () {
+                    toogleHealthyFood();
+                  },
+                  child: Text(
+                    'Healthy food',
+                    style: TextStyle(
+                      color:
+                          isHealthy ? kSecondaryColor : kfoodTypesDisableColor,
+                      fontFamily: 'gilroy-semi-bold',
+                    ),
                   ),
                 ),
-                Text(
-                  'Junk food',
-                  style: TextStyle(
-                    color: kfoodTypesDisableColor,
-                    fontFamily: 'gilroy-mediu',
+                TextButton(
+                  onPressed: () {
+                    toogleJunkFood();
+                  },
+                  child: Text(
+                    'Junk food',
+                    style: TextStyle(
+                      color: isJunk ? kSecondaryColor : kfoodTypesDisableColor,
+                      fontFamily: 'gilroy-semi-bold',
+                    ),
                   ),
                 ),
-                Text(
-                  'Dessert',
-                  style: TextStyle(
-                    color: kfoodTypesDisableColor,
-                    fontFamily: 'gilroy-mediu',
+                TextButton(
+                  onPressed: () {
+                    toogleDessertFood();
+                  },
+                  child: Text(
+                    'Dessert',
+                    style: TextStyle(
+                      color:
+                          isDessert ? kSecondaryColor : kfoodTypesDisableColor,
+                      fontFamily: 'gilroy-semi-bold',
+                    ),
                   ),
                 ),
               ],
