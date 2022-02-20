@@ -10,7 +10,7 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-List<Food> foods = [
+List<Food> foods = const [
   Food(
     'Eybisi Salad Mix',
     'Mix vegetables ingredients',
@@ -113,9 +113,19 @@ class _HomePageState extends State<HomePage> {
                     onPressed: () {},
                     icon: Image.asset('assets/images/Menu.png'),
                   ),
-                  const CircleAvatar(
-                    radius: 30,
-                    backgroundImage: AssetImage('assets/images/doguinho.jpg'),
+                  Container(
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: kBackgroundColor,
+                        border: Border.all(
+                          color: Color(0xffFB9692),
+                          width: 2,
+                        ),
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/person.png'),
+                        )),
                   ),
                 ],
               ),
