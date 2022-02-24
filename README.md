@@ -1,10 +1,10 @@
 # App food Layout
 
-Desafio de layout proposto durante a disciplina de Programação IV - Com layout a partir do Dribble utilizando Dart e Flutter.
+- Desafio de layout proposto durante a disciplina de Programação IV - Com layout a partir do Dribble utilizando Dart e Flutter.
 
 ## Repositório 
 
-[Link do respositório](https://github.com/Brennez/food-app)
+- [Link do respositório](https://github.com/Brennez/food-app)
 
 ## Layout do Dribbble
 
@@ -19,7 +19,7 @@ Desafio de layout proposto durante a disciplina de Programação IV - Com layout
 
 | Home Page                              | Detalhes                                                    |
 | -------------------------------------- | ----------------------------------------------------------- |
-| ![](assets/images/homePage2.jpeg)      | <img align="right" width="50%" align="center" src="assets/images/detailsPageScreenShot.jpeg" />             |
+| ![](assets/images/homePage2.jpeg)      | <img align="right" width="50%" height="50%" align="center" src="assets/images/detailsPageScreenShot.jpeg" />             |
 |                                        |                                                             |
 | -------------------------------------- | ----------------------------------------------------------- |
 | ![](assets/images/homePage1.jpeg)      | ![](assets/images/video.gif)                                |
